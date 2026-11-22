@@ -13,14 +13,25 @@ const recipeRoutes = require("./routes/recipeRoutes");
 const mealPlanRoutes = require("./routes/mealPlanRoutes");
 const reportRoutes = require("./routes/reportRoutes");
 const adminRoutes = require("./routes/adminRoutes");
+
 const app = express();
 
 // Middleware
 app.use(express.json());
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  process.env.CLIENT_ORIGIN
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: process.env.CLIENT_ORIGIN,
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
   })
 );
@@ -31,6 +42,7 @@ app.use("/api/recipes", recipeRoutes);
 app.use("/api/meal-plans", mealPlanRoutes);
 app.use("/api/reports", reportRoutes);
 app.use("/api/admin", adminRoutes);
+
 // Home Route
 app.get("/", (req, res) => {
   res.json({
