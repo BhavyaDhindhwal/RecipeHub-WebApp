@@ -1,13 +1,33 @@
+# 🍽️ RecipeHub – Recipe Management Platform
 
-## 🌐 Live Project Links
+**RecipeHub** is a full-stack web application where users can explore, share, manage recipes, save favourites, write reviews, and plan weekly meals.
 
-- **Frontend (Live Website):** https://recipe-hub-web-app.vercel.app/
-- **Backend (Live API):** https://recipehub-webapp.onrender.com/
+## ✨ Key Features
+- User Registration & Login (JWT Authentication)
+- Browse, Add, Edit & Delete Recipes
+- Favourite Recipes & Reviews
+- Weekly Meal Planner
+- Recipe Reporting System
+- Admin Dashboard
+- Approve, Reject & Manage Recipes
+- User and Report Management
 
+## 🛠️ Tech Stack
+- **Frontend:** React.js, Vite, HTML, CSS, JavaScript
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB Atlas, Mongoose
+- **Authentication:** JWT, bcrypt
+- **Deployment:** Vercel & Render
+
+## 🌐 Live Links
+- **Frontend:** https://recipe-hub-web-app.vercel.app/
+- **Backend:** https://recipehub-webapp.onrender.com/
 
 ## 🔐 Admin Login
-
-Use the following credentials to access the RecipeHub Admin Panel:
-
-- **Admin Email:** bhavyajaat@example.com
+- **Email:** bhavyajaat@example.com
 - **Password:** 2501350086
+
+## 👨‍💻 Developer
+**Bhavya **  
+B.Tech CSE (Full Stack Development)  
+K.R. Mangalam University
