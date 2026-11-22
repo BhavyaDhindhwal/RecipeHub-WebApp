@@ -1,5 +1,7 @@
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = (
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api"
+).replace(/\/$/, "");
 
 export const apiRequest = async (endpoint, options = {}) => {
   try {
@@ -17,10 +19,9 @@ export const apiRequest = async (endpoint, options = {}) => {
     });
 
     const contentType = response.headers.get("content-type");
-
     let data = {};
 
-    if (contentType && contentType.includes("application/json")) {
+    if (contentType?.includes("application/json")) {
       data = await response.json();
     }
 
@@ -31,7 +32,6 @@ export const apiRequest = async (endpoint, options = {}) => {
     }
 
     return data;
-
   } catch (error) {
     if (error instanceof TypeError) {
       throw new Error(
