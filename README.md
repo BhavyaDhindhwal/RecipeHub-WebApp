@@ -26,6 +26,9 @@
 ## 🔐 Admin Login
 - **Email:** bhavyajaat@example.com
 - **Password:** 2501350086
+## 📌 Additional Documentation
+
+An additional `README.md` file is available inside the **RecipeHub** folder. It contains screenshots of Postman API testing, including API requests and their respective responses and outputs for better understanding of the project's backend functionality.
 
 ## 👨‍💻 Developer
 **Bhavya **  
